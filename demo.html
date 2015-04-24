@@ -65,6 +65,16 @@ $('ul.slimmenu').slimmenu(
     indentChildren: true,
     childrenIndenter: '&raquo;'
 });
+/* start enable link toggle by jamesarthurjohn 
+    This allows the links in the lower resolution instance of Slimmenu to toggle multi-level sub-menus when 
+    clicking the link  as well as the button. 
+*/
+$(".slimmenu > li > a").each(function(){
+    $(this).click(function(){
+        $(this).siblings('.sub-collapser').click();
+    });
+});
+/* end enable link toggle by jamesarthurjohn */
 </script>
 </body>
 </html>
